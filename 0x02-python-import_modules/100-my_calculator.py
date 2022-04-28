@@ -4,14 +4,14 @@ from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
 
-    count = len(sys.argv)
+    ac = len(sys.argv)
+    if ac != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit (1)
+
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     operator = sys.argv[2]
-
-    if count != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit (1)
 
     if operator == '+':
         print(f"{a} + {b} =", add(a, b))
