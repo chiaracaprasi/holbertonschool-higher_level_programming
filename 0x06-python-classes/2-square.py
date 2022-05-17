@@ -2,7 +2,7 @@
 class Square:
     """Represents a Square.
     Private instance attribute: size
-    Instantiation with size (no type/value verification)."""
+    Instantiation with optional size"""
 
     def __init__(self, size=0):
         """ Initialise the data."""
