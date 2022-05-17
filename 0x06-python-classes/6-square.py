@@ -54,10 +54,10 @@ class Square:
         if self.__size == 0:
             print("")
             return
-        for i in range(0, self.__size):
-            print("")
+        for i in range(0, self.__position[1]):
+            print()
         for row in range(0, self.__size):
-            for hollow_col in range(self.__position[0]):
+            for hollow_col in range(0, self.__position[0]):
                 print(" ", end="")
             for solid_col in range(0, self.__size):
                 print('#', end="")
