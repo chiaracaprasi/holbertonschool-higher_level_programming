@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-class Square:
-    """Represents a Square.
+"""Represents a Square.
     Private instance attribute: size
     Public instance method: area
     Instantiation with optional size"""
 
+
+class Square:
+    """ Represents a class"""
     def __init__(self, size=0):
         """ Initialise the data."""
         if not isinstance(size, int):
