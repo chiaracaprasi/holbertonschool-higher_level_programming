@@ -2,9 +2,9 @@
 
 ## Description
 This project focuses on Test-Driven Development.
-Every task has two files: one script, and one test file (.txt) for this script. All test files are stored in the test directory.
-The doctests can be run with ```python3 -m doctest ./tests/*```
-The unittest can be run with ```python3 -m doctest -v ./tests/0-add_integer.txt ```
+- Every task has two files: one script, and one test file (.txt) for this script. - - All test files are stored in the test directory.
+- The doctests can be run with ```python3 -m doctest ./tests/*```
+- The unittest can be run with ```python3 -m doctest -v ./tests/0-add_integer.txt ```
 
 ## Table of contents
 
