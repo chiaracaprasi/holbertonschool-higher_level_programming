@@ -1,0 +1,77 @@
+The 2-matrix_divided
+======================
+
+Using ``matrix_divided``
+-------------------
+
+Importing the function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Checking for module docstring:
+	 >>> mod = __import__("2-matrix_divided").__doc__
+	 >>> len(mod) > 1
+	 True
+
+Checking for function docstring:
+	 >>> func = __import__("2-matrix_divided").matrix_divided.__doc__
+         >>> len(func) > 1
+	 True
+
+Checking regular use:
+	 >>> matrix = [[2, 4, 6], [8, 10, 12]]
+	 >>> matrix_divided(matrix, 2)
+	 [[1, 2, 3], [4, 5, 6]]
+
+
+Checking for passing None as div:
+	 >>> matrix = [[1, 2, 3], [4, 5, 6]]
+	 >>> matrix_divided(matrix, None)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: div must be a number
+
+Checking with passing no argument
+	 >>> matrix_divided()
+
+
+Checking with three arguments:
+
+
+
+Checking with rows of different length
+
+Checking for matrix as int
+
+
+Checking matrix as string
+
+
+Checking with div float:
+   
+
+
+
+Checking  with float matri:
+
+
+Checking with negative:
+
+
+Checking negative with positive:
+
+
+Checking negative float with positive:
+
+
+Checking with int and string:
+
+
+Checking with string and int:
+
+
+Checking with two string:
+
+
+Check with div 0:
+
+
