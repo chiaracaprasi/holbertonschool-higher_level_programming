@@ -43,6 +43,16 @@ Checking regular use:
     :
     <BLANKLINE>
 
+
+Checking with multiple spaces:
+    >>> text_indentation("   Hello")
+    Hello
+
+Checking with multiple spaces:
+    >>> text_indentation("\n   Hello")
+    <BLANKLINE>
+    Hello
+
 Checking with an int:
     >>> text_indentation(1)
     Traceback (most recent call last):
