@@ -4,56 +4,78 @@ The 0-add_integer module
 Using ``add_integer``
 -------------------
 
-First import
-``add_integer`` from the ``example`` module:
-
+Importing the function from the module:
     >>> add_integer = __import__('0-add_integer').add_integer
 
-Now use it:
+Checking for module docstring:
+	 >>> mod = __import__("0-add_integer").__doc__
+	 >>> len(mod) > 1
+	 True
 
+Checking for function docstring:
+	 >>> func = __import__("0-add_integer").add_integer.__doc__
+         >>> len(func) > 1
+	 True
+
+Checking regular addition:
     >>> add_integer(1, 2)
     3
 
+Checking int with float:
     >>> add_integer(3, 13.5)
     16
 
+Checking float with int:
+    >>> add_integer(3.8, 12)
+    15
+
+Checking with negative:
     >>> add_integer(-1, -5)
     -6
 
+Checking negative with positive:
     >>> add_integer(-1, 5)
     4
 
+Checking negative float with positive:
     >>> add_integer(-1.4, 5)
     4
 
+Checking with only one argument:
     >>> add_integer(1)
     99
 
+Checking with three arguments:
     >>> add_integer(1, 2, 3)
     Traceback (most recent call last):
     ...
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
+Checking with int and string:
     >>> add_integer(1, "Hello")
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
 
+Checking with string and int:
     >>> add_integer("Hello", 1)
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
 
+Checking with two string:
     >>> add_integer("Hello", "World")
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
 
+Checking with None:
     >>> add_integer(None)
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
 
+Checking with no arguments:
     >>> add_integer()
     Traceback (most recent call last):
     ...
