@@ -45,6 +45,12 @@ Checking with negative:
     ...
     ValueError: size must be >= 0
 
+Checking int with float:
+    >>> print_square(- 2.3)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
 Checking with three arguments:
     >>> print_square(1, 2)
     Traceback (most recent call last):
