@@ -3,9 +3,7 @@
 
 
 class Rectangle:
-    """"Represents a class rectangle define by width and height .
-    Private instance attribute: width
-    Instantiation with optional wiidth and height."""
+    """"Represents a class rectangle define by width and height. """
     def __init__(self, width=0, height=0):
         """ Initialise the data."""
         self.__width = width
@@ -47,7 +45,7 @@ class Rectangle:
     def perimeter(self):
         """ Returns the rectangle perimeter."""
         if self.__width == 0 or self.__height == 0:
-            perimeter = 0
+            return 0
         else:
             perimeter = (self.__width + self.__height) * 2
         return perimeter
@@ -63,4 +61,6 @@ class Rectangle:
         """ return a string representation of the rectangle
         to be able to recreate a new instance by using eval()
         """
-        return f"Rectangle({self'3[C-rectangle.py'.__width}, {self.__height})"
+        my_string = "Rectangle (" + str(self.width) + ", "
+        my_string += str(self.height) + ")"
+        return my_string
