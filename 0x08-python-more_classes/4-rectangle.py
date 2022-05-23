@@ -61,6 +61,4 @@ class Rectangle:
         """ return a string representation of the rectangle
         to be able to recreate a new instance by using eval()
         """
-        my_string = "Rectangle (" + str(self.width) + ", "
-        my_string += str(self.height) + ")"
-        return my_string
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
