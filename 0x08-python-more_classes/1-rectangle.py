@@ -3,9 +3,7 @@
 
 
 class Rectangle:
-    """"Represents a class rectangle define by width and height .
-    Private instance attribute: width
-    Instantiation with optional wiidth and height."""
+    """"Represents a class rectangle define by width and height """
     def __init__(self, width=0, height=0):
         """ Initialise the data."""
         self.__height = height
