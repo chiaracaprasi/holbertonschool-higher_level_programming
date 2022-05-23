@@ -20,8 +20,12 @@ Checking for function docstring:
 Checking regular use:
 	 >>> matrix = [[2, 4, 6], [8, 10, 12]]
 	 >>> matrix_divided(matrix, 2)
-	 [[1, 2, 3], [4, 5, 6]]
+	 [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
 
+Checking regular use:
+	 >>> matrix = [[2, 4, 6], [8, 10, 12]]
+	 >>> matrix_divided(matrix, 1.5)
+	 [1.33, 2.67, 4.0, 5.33, 6.67, 8.0]
 
 Checking for passing None as div:
 	 >>> matrix = [[1, 2, 3], [4, 5, 6]]
@@ -30,48 +34,60 @@ Checking for passing None as div:
          ...
 	 TypeError: div must be a number
 
-Checking with passing no argument
+Checking for division by zero:
+	 >>> matrix = [[1, 2, 3], [4, 5, 6]]
+	 >>> matrix_divided(matrix, 0)
+	 Traceback (most recent call last):
+	 ...
+	 ZeroDivisionError: division by zero
+
+Checking for no args:
 	 >>> matrix_divided()
-
-
-Checking with three arguments:
-
-
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
 Checking with rows of different length
+	>>> matrix = [[1, 2, 3], [4, 5, 6, 7]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+    	 ...
+	TypeError: Each row of the matrix must have the same size
 
 Checking for matrix as int
+>>> matrix = [1, [4, 5, 6, 7]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+    	 ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 Checking matrix as string
+>>> matrix = ["hello", [4, 5, 6, 7]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+    	 ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking with no div
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+      >>> matrix_divided(matrix)
+      Traceback (most recent call last):
+      ...
+      TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 
-Checking with div float:
-   
+Checking for 1 arg:
+	 >>> matrix_divided(matrix)
+	 Traceback (most recent call last):
+	 ...
+    	 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+		 
 
+Checking for negative numerators:
+	 >>> matrix = [[-1, -2, -3], [-4, -5, -6]]
+	 >>> matrix_divided(matrix, 3)
+	 [-0.33, -0.67, -1.0, -1.33, -1.67, -2.0]
 
-
-Checking  with float matri:
-
-
-Checking with negative:
-
-
-Checking negative with positive:
-
-
-Checking negative float with positive:
-
-
-Checking with int and string:
-
-
-Checking with string and int:
-
-
-Checking with two string:
-
-
-Check with div 0:
 
 
