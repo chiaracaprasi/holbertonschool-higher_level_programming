@@ -39,24 +39,24 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """Tests result of empty list []"""
         test = []
-        self.assertIsNone(max_integer(l))
+        self.assertIsNone(max_integer(test))
 
     def test_same_values(self):
         """Tests result of same values in list []"""
         test = [1, 5, 5, 5]
-        result = max_integer(l)
+        result = max_integer(test)
         self.assertEqual(result, 5)
 
     def test_same_values(self):
         """Tests result of same values in list []"""
         test = [1, 5, 5, 5]
-        result = max_integer(l)
+        result = max_integer(test)
         self.assertEqual(result, 5)
 
     def test_all_negative(self):
         """Tests for list with all negative numbers"""
         test = [-1, -2, -3, -4, -5]
-        self.assertEqual(max_integer(l), -1)
+        self.assertEqual(max_integer(test), -1)
 
 
 if __name__ == "__main__":
