@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_regular_use(self):
         """Test with a regular list of ints: should return the max result"""
         test = [1, 2, 3, 4, 5]
-        result = max_integer(l)
+        result = max_integer(test)
         self.assertEqual(result, 5)
 
     def test_none(self):
@@ -34,7 +34,7 @@ class TestMaxInteger(unittest.TestCase):
         """Tests for a non-int"""
         test = [1, 2, 3, "Hello", 5]
         with self.assertRaises(TypeError):
-            max_integer(l)
+            max_integer(test)
 
     def test_empty_list(self):
         """Tests result of empty list []"""
