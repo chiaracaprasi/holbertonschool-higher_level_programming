@@ -6,7 +6,7 @@ import math
 
 
 class MagicClass:
-    
+    """Initializes the class""
     def __init__(self, radius=0):
        
         self.__radius = 0
