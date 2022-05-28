@@ -1,20 +1,14 @@
-# Project 0x06-python-classes
+# 0x06. Python - Classes and Objects
 
-**Mandatory Tasks**
+## Table of contents
 
-- Task 0 -
-vironment variable $PYFILE
-- Task 1 - 
-- Task 2 - 
-- Task 3 - 
-- Task 4 - 
-- Task 5 - 
-- Task 6 - 
-
-**Advanced Tasks**
-
-- Task 7 -
-- Task 8 -
-- Task 9 -
-- Task 10 -
-
+Files | Description
+----- | -----------
+[0-square.py](./0-square.py) | Python class Square that defines a square
+[1-square.py](./1-square.py) | Python class Square that defines a square based on the previous one
+[2-square.py](./2-square.py) | Python class Square that defines a square based on the previous one
+[3-square.py](./3-square.py) | Python class Square that defines a square based on the previous one
+[4-square.py](./4-square.py) | Python class Square that defines a square based on the previous one
+[5-square.py](./5-square.py) | Python class Square that defines a square based on the previous one
+[6-square.py](./6-square.py) | Python class Square that defines a square based on the previous one
+[103-magic_class.py](./103-magic_class.py) | Python class MagicClass that does exactly the same as a given ByteCode
