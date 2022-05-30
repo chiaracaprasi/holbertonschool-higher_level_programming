@@ -10,9 +10,9 @@ class Square(Rectangle):
     def __init__(self, size):
         """instantiation of the rectangle"""
         self.integer_validator("size", size)
-        self.size = size
+        self.__size = size
         super().__init__(size, size)
 
     def area(self):
         """ Returns the area."""
-        return self.size ** 2
+        return self.__size ** 2
