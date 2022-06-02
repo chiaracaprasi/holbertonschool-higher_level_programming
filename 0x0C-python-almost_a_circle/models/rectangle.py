@@ -104,7 +104,7 @@ class Rectangle(Base):
                 self.y = attr
 
         if not args:
-            for key, value in kwargs:
+            for key, value in kwargs.items():
                 if 'id' in kwargs:
                     self.id = kwargs["id"]
                 if 'width' in kwargs:
@@ -118,3 +118,11 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a Rectangle """
+        d = {}
+        d["id"] = self.id
+        d["width"] = self.width
+        d["height"] = self.height
+        d["x"] = self.x
+        d["y"] = self.y
+
+        return d
