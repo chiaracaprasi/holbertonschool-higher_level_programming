@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains one function
+Module append_after
 """
-import json
 
 
 def append_after(filename="", search_string="", new_string=""):
