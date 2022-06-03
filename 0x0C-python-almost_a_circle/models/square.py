@@ -24,7 +24,6 @@ class Square(Rectangle):
         """Overridding __str__ method """
         return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}")
 
-
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         if args is not None and len(args) != 0:
