@@ -2,6 +2,7 @@
 """ Module base"""
 import json
 
+
 class Base:
     """ Represent a class Base
     if id is not None increment __nb_objects and assign new value
@@ -25,6 +26,33 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file """
-        filename = cls.__name__ +'.json'
-        with open(filename, 'w') as f:
-            json.dump(list_objs, f)
+        filename = cls.__name__ + '.json'
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set """
+        dummy = cls(1, 4)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Returns a list of instances """
+        my_list = []
+        filename = cls.__name__ + '.json'
+        try:
+            with open(filename, 'r') as f:
+                my_list = cls.from_json_string(f.read())
+                for key, value in enumerate(my_list):
+                    my_list[key] = cls.create(**my_list[key])
+        except Exception:
+            pass
+        return my_list
