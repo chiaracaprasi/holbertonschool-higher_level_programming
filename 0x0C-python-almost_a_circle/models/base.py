@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Module base"""
 import json
+import csv
 
 
 class Base:
@@ -20,13 +21,20 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries """
-        if list_dictionaries is not None or len(list_dictionary) == 0:
-            return json.dumps(list_dictionaries)
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return("[]")
+        return json.dumps(list_dictionaries)
 
     @classmethod
-    def save_to_file(cls, list_objs):
+    def save_to_file(cls, list_objs)
         """writes the JSON string representation of list_objs to a file """
+        my_list = []
         filename = cls.__name__ + '.json'
+        if list_objs is not None:
+            for item in list_objs:
+                my_list.append(cls.to_dictionary(item))
+        with open(filename, 'w', encoding="utf-8") as f:
+            f.write(cls.to_json_string(my_list))
 
     @staticmethod
     def from_json_string(json_string):
@@ -46,8 +54,8 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances """
-        my_list = []
         filename = cls.__name__ + '.json'
+        my_list = []
         try:
             with open(filename, 'r') as f:
                 my_list = cls.from_json_string(f.read())
@@ -56,3 +64,17 @@ class Base:
         except Exception:
             pass
         return my_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes the CSV string representation of list_objs to a file: """
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'w', encoding="utf-8") as csv_f:
+            csv_writer = csv.writer(csv_f)
+        
+    @classmethod
+    def load_from_file_csv(cls):
+        """ """
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'r', encoding="utf-8") as csv_f:
+            csv_reader = csv.reader(csv_f)
