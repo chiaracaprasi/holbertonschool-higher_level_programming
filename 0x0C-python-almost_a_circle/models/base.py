@@ -26,7 +26,7 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
-    def save_to_file(cls, list_objs)
+    def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file """
         my_list = []
         filename = cls.__name__ + '.json'
@@ -64,17 +64,3 @@ class Base:
         except Exception:
             pass
         return my_list
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        """writes the CSV string representation of list_objs to a file: """
-        filename = cls.__name__ + '.csv'
-        with open(filename, 'w', encoding="utf-8") as csv_f:
-            csv_writer = csv.writer(csv_f)
-        
-    @classmethod
-    def load_from_file_csv(cls):
-        """ """
-        filename = cls.__name__ + '.csv'
-        with open(filename, 'r', encoding="utf-8") as csv_f:
-            csv_reader = csv.reader(csv_f)
