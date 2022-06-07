@@ -31,11 +31,6 @@ class TestSquaredocs(unittest.TestCase):
         """Tests for docstring"""
         self.assertTrue(len(Square.__doc__) >= 1)
 
-    def test_func_docstr(self):
-        """Tests for docstrings in all functions"""
-        for func in self.square_funcs:
-            self.assertTrue(len(func[1].__doc__) >= 1)
-
 
 class TestRectangle(unittest.TestCase):
     """ Tests functionality of class"""
@@ -157,10 +152,3 @@ class TestRectangle(unittest.TestCase):
         """ Test for the string representation"""
         s = Square(1, 2, 2, 1)
         self.assertEqual(str(s), "[Square] (1) 2/2 - 1")
-
-    def test_area(self):
-        """ test area methof for square """
-        s_1 = Square(size=2)
-        self.assertEqual(self.s_1.area(), 4)
-        s_2 = Square(size=6)
-        self.assertEqual(self.s_2.area(), 36)
