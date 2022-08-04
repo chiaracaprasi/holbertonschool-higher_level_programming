@@ -17,7 +17,7 @@ if __name__ == "__main__":
                 FROM cities LEFT JOIN states\
                 ON states.id = cities.state_id\
                 WHERE states.name LIKE %s\
-                ORDER BY cities.id ASC",(sys.argv[4],))
+                ORDER BY cities.id ASC", (sys.argv[4],))
     rows = cur.fetchall()
     print(", ".join(row[0] for row in rows))
     cur.close()
