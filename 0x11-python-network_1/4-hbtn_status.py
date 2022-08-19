@@ -8,4 +8,4 @@ if __name__ == "__main__":
     res = get(url)
     print('Body response:')
     print("\t- type: {}".format(type(res.text)))
-    print("\t- utf8 content: {}".format(res.text))
+    print("\t- content: {}".format(res.text))
