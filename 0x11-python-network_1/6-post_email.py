@@ -10,7 +10,5 @@ if __name__ == "__main__":
 
     url = argv[1]
     email = {'email': argv[2]}
-    # data = urllib.parse.urlencode(values)
-    # data = data.encode('ascii')
     r = requests.post(url, data=email)
     print(r.text)
