@@ -8,10 +8,10 @@ axios.get(APIUrl).then((response) => {
   const completedDict = {};
   for (const task of todos) {
     if (task.completed === true) {
-      if (completedDict[task.userId] === undefined) {
-        completedDict[task.userId] = 1;
-      } else {
+      if (completedDict[task.userId] !== undefined) {
         completedDict[task.userId] += 1;
+      } else {
+        completedDict[task.userId] = 1;
       }
     }
   }
