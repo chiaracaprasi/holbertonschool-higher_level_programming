@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const axios = require("axios");
+const axios = require('axios');
 const APIUrl = process.argv[2];
 
 axios
@@ -11,7 +11,7 @@ axios
     films.forEach((film) => {
       const characters = film.characters;
       const isPresent = characters.includes(
-        "https://swapi-api.hbtn.io/api/people/18/"
+        'https://swapi-api.hbtn.io/api/people/18/'
       );
       if (isPresent === true) {
         count++;
@@ -20,5 +20,5 @@ axios
     console.log(count);
   })
   .catch((error) => {
-    console.log("code: " + error.response.status);
+    console.log('code: ' + error.response.status);
   });
