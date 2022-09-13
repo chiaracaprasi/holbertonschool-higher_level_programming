@@ -8,7 +8,7 @@ axios.get(APIUrl).then((response) => {
   let count = 0;
   films.forEach(film => {
     const characters = film.characters;
-    const isPresent = characters.includes('https://swapi-api.hbtn.io/api/people/18/');
+    const isPresent = characters.includes('/people/18/');
     if (isPresent === true) {
       count++;
     }
