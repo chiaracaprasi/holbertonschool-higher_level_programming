@@ -1,11 +1,13 @@
 #!/usr/bin/node
 
-const fs = require('fs');
-const filename = process.argv[2];
-const text = process.argv[3];
+const axios = require('axios');
+const url = process.argv[2];
 
-fs.writeFile(filename, text, 'utf-8', err => {
-  if (err) {
-    console.log(err);
-  }
-});
+axios
+  .get(url)
+  .then((response) => {
+    console.log('code: ' + response.status);
+  })
+  .catch((error) => {
+    console.log('code: ' + error.response.status);
+  });
