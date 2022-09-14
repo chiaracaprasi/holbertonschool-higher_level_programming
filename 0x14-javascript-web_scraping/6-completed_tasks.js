@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const axios = require('axios');
-const APIUrl = 'https://jsonplaceholder.typicode.com/todos';
+const APIUrl = process.argv[2];
 
 axios.get(APIUrl).then((response) => {
   const todos = response.data;
